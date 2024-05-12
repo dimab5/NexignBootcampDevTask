@@ -26,7 +26,7 @@ Brt читает данные из топика `cdr_switch_to_brt`, автор�
 
 ## 4) Схема запуска сервисов в ручном режиме
 1) Перед запуском сервисов требуется через докер запустить контейнеры: `zookeper`, `kafka`, `postgres_cdr`, `postgres_brt`, `postgres_hrs`.
-2) После этого запустить сначала сервисы [Brt](DevelopmentTask/Brt), [Hrs](DevelopmentTask/Hrs), запустив соответствующие SpringBootApplication: [BrtApplication](DevelopmentTask/Brt/src/main/java/com/brt/program/BrtApplication.java), [HrsApplication](DevelopmentTask/Hrs/src/main/java/com/hrt/program/HrsApplication.java).
+2) После этого запустить сначала сервисы [Brt](DevelopmentTask/Brt), [Hrs](DevelopmentTask/Hrs), запустив соответствующие SpringBootApplication: [BrtApplication](DevelopmentTask/Brt/src/main/java/com/brt/program/BrtApplication.java), [HrsApplication](DevelopmentTask/Hrs/src/main/java/com/hrs/program/HrsApplication.java).
 
 
 
