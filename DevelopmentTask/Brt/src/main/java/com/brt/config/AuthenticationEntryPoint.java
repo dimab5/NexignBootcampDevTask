@@ -9,9 +9,19 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Class implementing an entry point for authentication.
+ */
 @Component
 public class AuthenticationEntryPoint extends BasicAuthenticationEntryPoint {
-
+    /**
+     * Handles authentication request when an exception occurs.
+     *
+     * @param request   HTTP request.
+     * @param response  HTTP response.
+     * @param authEx    Authentication exception.
+     * @throws IOException If an input/output error occurs.
+     */
     @Override
     public void commence(
             HttpServletRequest request, HttpServletResponse response, AuthenticationException authEx)

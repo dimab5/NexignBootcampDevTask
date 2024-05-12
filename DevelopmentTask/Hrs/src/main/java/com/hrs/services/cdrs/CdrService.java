@@ -18,6 +18,9 @@ import java.awt.desktop.SystemEventListener;
 import java.time.*;
 import java.util.*;
 
+/**
+ * Implementation
+ */
 @Service
 public class CdrService implements ICdrService {
     private Integer month = null;

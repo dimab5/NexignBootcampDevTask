@@ -15,12 +15,23 @@ import org.springframework.stereotype.Service;
 import java.time.*;
 import java.util.*;
 
+/**
+ * A class that deducts fees from subscribers with a monthly tariff (prepaid).
+ */
 @Service
 @AllArgsConstructor
 public class MonthHandler extends BaseTariffHandler {
     private final TrafficRepository trafficRepository;
     private final KafkaProducer kafkaProducer;
 
+    /**
+     * A function that deducts fees from subscribers with a monthly tariff.
+     * @param costDto The CostDto object containing cost-related information
+     * @param cdrDto The CdrDto object containing Call Detail Record (CDR) information
+     * @param tariffRules The tariff rules to apply
+     * @param objectMapper The ObjectMapper used for JSON serialization/deserialization
+     * @param currentMonth The current month for tariff calculation
+     */
     @Override
     public void handle(CostDto costDto, CdrDto cdrDto, String tariffRules, ObjectMapper objectMapper, Integer currentMonth) {
         if (currentMonth != null &&

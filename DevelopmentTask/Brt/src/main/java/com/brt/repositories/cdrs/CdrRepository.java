@@ -6,6 +6,9 @@ import com.brt.models.clients.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+/**
+ * Repository interface for accessing CDR data.
+ */
 @Repository
 public interface CdrRepository extends JpaRepository<Cdr, Long> {
     Cdr findCdrById(Long id);

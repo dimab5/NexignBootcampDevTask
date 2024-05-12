@@ -18,6 +18,9 @@ import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * Implementation
+ */
 @Service
 @AllArgsConstructor
 public class CdrGenerator implements ICdrGenerator {

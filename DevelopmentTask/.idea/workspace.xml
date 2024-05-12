@@ -5,29 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a197c37-862a-4b3d-9a89-4e4e9754fe2e" name="Changes" comment="edit api 2.0">
-      <change afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/controllers/RequestSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82d91152-c69e-42fd-b092-b74ac03b905e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/82d91152-c69e-42fd-b092-b74ac03b905e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82d91152-c69e-42fd-b092-b74ac03b905e/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/82d91152-c69e-42fd-b092-b74ac03b905e/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brt/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/config/AuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/config/AuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/controllers/abonents/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/controllers/abonents/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/controllers/managers/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/controllers/managers/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/kafka/KafkaConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/kafka/KafkaConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/kafka/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/kafka/KafkaConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Brt/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CdrGenerator/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/controllers/GenerateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/kafka/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/kafka/KafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/kafka/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/kafka/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/repositories/cdrs/CdrRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/repositories/cdrs/CdrRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/repositories/clients/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/repositories/clients/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/repositories/tariffPayments/TariffPaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/repositories/tariffPayments/TariffPaymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/cdrs/CdrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/cdrs/CdrService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/cdrs/ICdrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/cdrs/ICdrService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/clients/ClientDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/clients/ClientDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/clients/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/clients/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/clients/IClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/clients/IClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/costs/CostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/costs/CostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/costs/ICostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/costs/ICostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/mappers/cdrs/CdrMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/mappers/cdrs/CdrMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/mappers/clients/ClientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/mappers/clients/ClientMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/mappers/costs/CostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/services/mappers/costs/CostMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/controllers/GenerateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/controllers/GenerateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/controllers/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/controllers/RequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/kafka/KafkaConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/kafka/KafkaConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/kafka/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/kafka/KafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/kafka/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/kafka/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/repositories/cdrs/CdrRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/repositories/cdrs/CdrRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/repositories/clients/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/repositories/clients/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/cdrs/CdrGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/cdrs/CdrGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hrs/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/cdrs/CdrProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/cdrs/CdrProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/cdrs/ICdrGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/cdrs/ICdrGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/cdrs/ICdrProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/cdrs/ICdrProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/clients/IClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/clients/IClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/kafka/KafkaConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/kafka/KafkaConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/kafka/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/kafka/KafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/kafka/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/kafka/KafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/kafka/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/kafka/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/repositories/histories/HistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/repositories/histories/HistoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/repositories/tariffs/TariffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/repositories/tariffs/TariffRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/repositories/traffics/TrafficRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/repositories/traffics/TrafficRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/cdrs/CdrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/cdrs/CdrService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/cdrs/ICdrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/cdrs/ICdrService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/CostCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/CostCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/ICostCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/ICostCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/BaseTariffHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/BaseTariffHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/ITariffHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/ITariffHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/MonthHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/MonthHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/OverlimitHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/OverlimitHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/PrepaidHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/PrepaidHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/TariffsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/TariffsHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +168,7 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/prog/жаба лабы/CdrService",
+    "last_opened_file_path": "C:/prog/NexignBootcampDevTask/DevelopmentTask",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -151,7 +178,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -208,7 +235,21 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker.postgres_hrs: Compose Deployment">
+  <component name="RunManager" selected="Spring Boot.HrsApplication">
+    <configuration name="BrtApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Brt" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.brt.program.BrtApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CdrGeneratorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="CdrGenerator" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cdrGenerator.program.CdrGeneratorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HrsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Hrs" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hrs.program.HrsApplication" />
@@ -407,6 +448,7 @@
       <workItem from="1715509363758" duration="317000" />
       <workItem from="1715509808452" duration="3828000" />
       <workItem from="1715514128373" duration="3705000" />
+      <workItem from="1715536585710" duration="3727000" />
     </task>
     <task id="LOCAL-00001" summary="add project">
       <option name="closed" value="true" />

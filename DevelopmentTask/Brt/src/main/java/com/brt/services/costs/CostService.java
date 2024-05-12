@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Implementation
+ */
 @Service
 @AllArgsConstructor
 public class CostService implements ICostService {

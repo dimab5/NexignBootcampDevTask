@@ -12,6 +12,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 
+/**
+ * Service class for loading user details during authentication.
+ */
 @Service
 public class ClientDetailsService implements UserDetailsService {
     @Autowired
@@ -20,6 +23,12 @@ public class ClientDetailsService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    /**
+     * Loads user details by username.
+     * @param username The username to load details for
+     * @return UserDetails object representing the user
+     * @throws UsernameNotFoundException If the user is not found
+     */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         if (username.equals("admin")) {

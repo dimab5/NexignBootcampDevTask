@@ -10,12 +10,21 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
+/**
+ * REST controller for client operations.
+ */
 @RestController
 @RequestMapping("/clients")
 @AllArgsConstructor
 public class ClientController {
     private final IClientService clientService;
 
+    /**
+     * Retrieves the balance of a client based on their phone number.
+     * @param msisdn The client's phone number
+     * @param principal The current user
+     * @return ResponseEntity object with the client's balance and response status
+     */
     @GetMapping("/{msisdn}/balance")
     public ResponseEntity<BalanceDto> checkBalance(
             @PathVariable String msisdn,
@@ -33,6 +42,13 @@ public class ClientController {
         }
     }
 
+    /**
+     * Deposits money into a client's balance.
+     * @param msisdn The client's phone number
+     * @param balanceDto Object containing the amount to deposit into the balance
+     * @param principal The current user
+     * @return ResponseEntity object with the updated client's balance and response status
+     */
     @PatchMapping("/{msisdn}/balance")
     public ResponseEntity<BalanceDto> depositMoney(
             @PathVariable String msisdn,
@@ -57,6 +73,11 @@ public class ClientController {
         return ResponseEntity.ok(balanceDto);
     }
 
+    /**
+     * Handles the exception when it's not possible to read an HTTP message.
+     * @param ex The HttpMessageNotReadableException
+     * @return ResponseEntity object with an error message and response status
+     */
     @ExceptionHandler(org.springframework.http.converter.HttpMessageNotReadableException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<String> handleHttpMessageNotReadableException(org.springframework.http.converter.HttpMessageNotReadableException ex) {

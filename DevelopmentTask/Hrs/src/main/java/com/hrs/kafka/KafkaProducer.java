@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+/**
+ * Service class for producing messages to Kafka topics.
+ */
 @Service
 @AllArgsConstructor
 public class KafkaProducer {

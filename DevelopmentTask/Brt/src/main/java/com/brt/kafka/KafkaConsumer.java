@@ -17,6 +17,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Kafka consumer service for consuming messages from Kafka topics.
+ */
 @Slf4j
 @Service
 @AllArgsConstructor
@@ -28,6 +31,11 @@ public class KafkaConsumer {
     private final ClientRepository clientRepository;
     private final TariffPaymentRepository tariffPaymentRepository;
 
+    /**
+     * Listens to the "cdr_switch_to_brt" Kafka topic for CDR messages.
+     * Parses and processes the CDR messages and sends them to the appropriate service.
+     * @param message The CDR message received from Kafka
+     */
     @KafkaListener(topics = "cdr_switch_to_brt", groupId = "group")
     public void listenCdrs(String message) {
         List<Cdr> cdrs = cdrService.parseCdrs(message);
@@ -39,6 +47,11 @@ public class KafkaConsumer {
         kafkaProducer.sendMessage(cdrService.createJsonCdr(cdrs));
     }
 
+    /**
+     * Listens to the "cost_hrs_to_brt" Kafka topic for cost messages.
+     * Parses and processes the cost messages and updates client balances accordingly.
+     * @param message The cost message received from Kafka
+     */
     @KafkaListener(topics = "cost_hrs_to_brt", groupId = "group")
     public void listenCosts(String message) {
         List<CostDto> costDtoList = costService.parseCosts(message);
@@ -71,6 +84,12 @@ public class KafkaConsumer {
             clientRepository.save(client);
         });
     }
+
+    /**
+     * Listens to the "tariff_hrs_to_brt" Kafka topic for tariff messages.
+     * Parses and processes the tariff messages and updates client balances accordingly.
+     * @param message The tariff message received from Kafka
+     */
     @KafkaListener(topics = "tariff_hrs_to_brt", groupId = "group")
     public void listenTariff(String message) {
         List<TariffPayment> tariffPaymentList = costService.parseMonthCosts(message);

@@ -11,8 +11,15 @@ import org.springframework.kafka.core.ProducerFactory;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Configuration class for Kafka producer settings.
+ */
 @Configuration
 public class KafkaProducerConfig {
+    /**
+     * Creates a ProducerFactory for producing messages to Kafka topics.
+     * @return ProducerFactory instance with configured properties
+     */
     @Bean
     public ProducerFactory<String, String> producerFactory() {
         Map<String, Object> configProps = new HashMap<>();
@@ -23,6 +30,11 @@ public class KafkaProducerConfig {
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
+
+    /**
+     * Creates a KafkaTemplate for sending messages to Kafka topics.
+     * @return KafkaTemplate instance using the configured ProducerFactory
+     */
     @Bean
     public KafkaTemplate<String, String> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());

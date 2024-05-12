@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 
 import java.time.Month;
 
+/**
+ * Implementation
+ */
 @Service
 @AllArgsConstructor
 public class CostCalculator implements ICostCalculator {
