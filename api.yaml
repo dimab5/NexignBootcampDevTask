@@ -1,0 +1,298 @@
+openapi: '3.0.0'
+info: 
+  title: Ромашка API
+  description: API предоставляет возможность управления услугами абонентов. Вся аутентификация сделана в формате Basic. Для абонента нужно указать номер телефона и в логин и в пароль. Для менеждеров - admin/admin.
+  termsOfService: localhost
+  version: '1.0.0'
+
+servers: 
+  - url: localhost:5050
+    description: BRT Server
+    
+tags:
+  - name: abonent
+    description: Операции, доступные абонентам Ромашки
+  - name: manager
+    description: Операции, доступные менеджеру Ромашки
+    
+paths:
+  /clients/{msisdn}/balance:
+    summary: Операции для контроля состояния баланса абонента
+    description: Содержит список операций, доступных абонентам Ромашки для просмотра и пополнения баланса
+    patch:
+      tags:
+        - abonent
+      summary: Пополнение баланса на определенную сумму
+      description: Пополнение баланса на определенную сумму с авторизацией по номеру телефона
+      operationId: pay
+      parameters: 
+        - name: msisdn
+          in: path
+          description: Номер абонента
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        description: Информация о пополнении баланса 
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BalanceOperation'
+      responses:
+        '200':
+          description: Успешное пополнение баланса
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BalanceOperation'
+        '400':
+          description: Сервер не понял запрос пользователя из-за синтаксической ошибки
+        '401':
+          description: Абонент не авторизирован
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationError'
+        '503':
+          description: Сервис не отвечает
+      security:
+        - abonentBasicAuth: []
+    get:
+      tags:
+        - abonent
+      summary: Проверка баланса
+      description: Проверка баланса с авторизацией по номеру телефона
+      operationId: pay
+      parameters: 
+        - name: msisdn
+          in: path
+          description: Номер абонента
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Успешное получение информации баланса
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BalanceOperation'
+        '400':
+          description: Сервер не понял запрос пользователя из-за синтаксической ошибки
+        '401':
+          description: Абонент не авторизирован
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationError'
+        '503':
+          description: Сервис не отвечает
+      security:
+        - abonentBasicAuth: []
+        
+  /clients/{msisdn}/tariffID:
+    patch: 
+      tags:
+        - manager
+      summary: Изменение тарифа абонента
+      description: Изменение тарифа абонента по его номеру телефона
+      operationId: changeTariff
+      parameters: 
+        - name: msisdn
+          in: path
+          description: Номер абонента
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        description: информация об изменении тарифа 
+        required: true
+        content:
+          application/json:
+            schema:
+                $ref: '#/components/schemas/TariffChange'
+      responses:
+        '200':
+          description: Успешное пополнение баланса
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TariffChange'
+        '400':
+          description: Абонен с таким номером не найден
+        '401':
+          description: Менеджер не авторизирован
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationError'
+        '503':
+          description: BRT не отвечает
+      security:
+        - managerBasicAuth: []
+        
+  /clients:
+    post:
+      tags:
+        - manager
+      summary: Добавление нового абонента
+      description: Добавление абонента с информацией о его номере телефона, тарифа и баланса
+      operationId: changeTariff
+      requestBody:
+        description: Информация о добавлении абонента
+        required: true
+        content:
+          application/json:
+            schema:
+                $ref: '#/components/schemas/AbonentInfo'
+      responses:
+        '200':
+          description: Успешное добавление абонента
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AbonentInfo'
+        '400':
+          description: Некорректные данные об абоненте
+        '401':
+          description: Менеджер не авторизирован
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationError'
+        '503':
+          description: BRT не отвечает
+      security:
+        - managerBasicAuth: []
+    get:
+      tags:
+        - manager
+      summary: Посмотреть информацию об абонентах
+      description: Посмеотреть информацию обо все абонентах Ромашка
+      operationId: CheckInformation
+      responses:
+        '200':
+          description: Успешное получение информации об абонентах
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AllAbonentsInfo'
+        '400':
+          description: Сервер не понял запрос пользователя из-за синтаксической ошибки
+        '401':
+          description: Менеджер не авторизирован
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthorizationError'
+        '503':
+          description: Сервис не отвечает
+      security:
+        - managerBasicAuth: []
+      
+
+components:
+  schemas:
+    BalanceOperation:
+      type: object
+      description: Информация для пополнения баланса
+      properties:
+        msisdn:
+          type: string
+          description: Номер абонента
+        money:
+          type: number
+          description: Сумма пополнения баланса
+          default: 100
+      required: 
+        - msisdn
+        - money
+      example:
+        money: 150
+        
+    AbonentInfo:
+      type: object
+      description: Информация об абоненте
+      properties:
+        msisdn:
+          type: string
+          description: Номер абонента
+        tariffId:
+          type: number
+          description: Номер тарифа
+        money:
+          type: number
+          description: Баланс
+          default: 100
+      required: 
+        - msisdn
+        - tariffId
+      example:          
+        msisdn: 79146472323
+        tariffId: 11
+        money: 100
+    
+    TariffChange:
+      type: object
+      description: Информация для смены тарифа абонента
+      properties:
+        msisdn:
+          type: string
+          description: Номер абонента
+        tariffId:
+          type: number
+          description: Номер тарифа
+      required: 
+        - msisdn
+        - tariffId
+      example:
+        tariffId: 11
+    
+    AllAbonentsInfo:
+      type: object
+      description: Информация обо всех абонентах Ромашки
+      properties:
+        clients:
+          type: array
+          description: Информация об абонентах
+          items:
+            $ref: '#/components/schemas/AbonentInfo'
+      required: 
+        - clients
+      example: [
+          {msisdn: 79145672839,
+          tariffId: 11,
+          money: 100},
+          {msisdn: 79147390088,
+          tariffId: 12,
+          money: 140},
+          {msisdn: 79147390095,
+          tariffId: 12,
+          money: 200},
+          ]
+          
+    AuthorizationError:
+      type: object
+      description: Информация авторизации абонента
+      properties:
+        error:
+          type: string
+          description: Ошибка авторизации
+          default: "Аuthorization failed"
+      required: 
+        - error
+      example:
+        error: "Аuthorization failed"
+    
+    
+  
+  securitySchemes:
+    managerBasicAuth:
+      type: http
+      scheme: basic
+    abonentBasicAuth:
+      type: http
+      scheme: basic
+
+
