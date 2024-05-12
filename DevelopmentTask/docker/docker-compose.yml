@@ -1,0 +1,172 @@
+version: '3'
+
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    networks:
+      - kafka-network
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    healthcheck:
+      test: echo stat | nc localhost 2181
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  kafka:
+    image: confluentinc/cp-kafka
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    networks:
+      - kafka-network
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:9093,OUTSIDE://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    healthcheck:
+      test: ["CMD", "kafka-topics", "--list", "--bootstrap-server", "localhost:9092"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  postgres_cdr:
+    container_name: db_cdr
+    image: postgres:14.5
+    hostname: postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready","-d","postgres","-U","postgres" ]
+      interval: 5s
+      timeout: 1s
+      retries: 5
+    environment:
+      - POSTGRES_PORT=5432
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    volumes:
+      - ../CdrGenerator/src/main/resources/db/migration/V1__init.sql:/docker-entrypoint-initdb.d/V1__init.sql
+    networks:
+      - kafka-network
+
+  postgres_brt:
+    container_name: db_brt
+    image: postgres:14.5
+    hostname: postgres
+    restart: unless-stopped
+    ports:
+      - "6432:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready","-d","postgres","-U","postgres" ]
+      interval: 5s
+      timeout: 1s
+      retries: 5
+    environment:
+      - POSTGRES_PORT=6432
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    volumes:
+        - ../Brt/src/main/resources/db/migration/V1__init.sql:/docker-entrypoint-initdb.d/V1__init.sql
+    networks:
+      - kafka-network
+
+  postgres_hrs:
+    container_name: db_hrs
+    image: postgres:14.5
+    hostname: postgres
+    restart: unless-stopped
+    ports:
+      - "7432:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready","-d","postgres","-U","postgres" ]
+      interval: 5s
+      timeout: 1s
+      retries: 5
+    environment:
+      - POSTGRES_PORT=7432
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    volumes:
+      - ../Hrs/src/main/resources/db/migration/V1__init.sql:/docker-entrypoint-initdb.d/V1__init.sql
+    networks:
+      - kafka-network
+
+  cdr_generator:
+    restart: always
+    ports:
+      - "8080:8080"
+    build:
+      dockerfile: ../CdrGenerator/docker/Dockerfile
+    container_name: cdr_generator
+    depends_on:
+      postgres_cdr:
+        condition: service_healthy
+      zookeeper:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres_cdr:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    networks:
+      - kafka-network
+
+  brt:
+    restart: always
+    ports:
+      - "5050:5050"
+    build:
+      dockerfile: ../Brt/docker/Dockerfile
+    container_name: brt
+    depends_on:
+      postgres_brt:
+        condition: service_healthy
+      zookeeper:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres_brt:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    networks:
+      - kafka-network
+
+  hrs:
+    restart: always
+    build:
+      dockerfile: ../Hrs/docker/Dockerfile
+    container_name: hrs
+    depends_on:
+      postgres_hrs:
+        condition: service_healthy
+      zookeeper:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres_hrs:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    networks:
+      - kafka-network
+
+
+networks:
+  kafka-network:
+    driver: bridge

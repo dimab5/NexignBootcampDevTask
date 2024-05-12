@@ -1,0 +1,1 @@
+HTTP Status 401 - Full authentication is required to access this resource

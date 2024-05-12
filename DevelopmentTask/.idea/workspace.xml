@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7a197c37-862a-4b3d-9a89-4e4e9754fe2e" name="Changes" comment="edit api 2.0">
+      <change afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/controllers/RequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82d91152-c69e-42fd-b092-b74ac03b905e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/82d91152-c69e-42fd-b092-b74ac03b905e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82d91152-c69e-42fd-b092-b74ac03b905e/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/82d91152-c69e-42fd-b092-b74ac03b905e/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/java/com/brt/kafka/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/java/com/brt/kafka/KafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Brt/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Brt/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/controllers/GenerateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/cdrs/CdrGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/CdrGenerator/src/main/java/com/cdrGenerator/services/cdrs/CdrGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/cdrs/CdrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/cdrs/CdrService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/CostCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/CostCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/ICostCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/ICostCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/BaseTariffHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/BaseTariffHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/ITariffHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/ITariffHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/MonthHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/MonthHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/OverlimitHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/OverlimitHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/PrepaidHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/PrepaidHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/TariffsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hrs/src/main/java/com/hrs/services/tariffs/handlers/TariffsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="test/CDR_BRT" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/requests-with-authorization.http" environment="test" />
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http" environment="test" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2fXahoetJXzqwXxGc23ItASi4R8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Application.executor": "Run",
+    "Application.CdrGeneratorApplication.executor": "Run",
+    "Application.KafkaTopics.executor": "Run",
+    "Database Script.V1__init.sql (1).executor": "Run",
+    "Database Script.V1__init.sql.executor": "Run",
+    "Docker.CdrGenerator.h2_database: Compose Deployment.executor": "Run",
+    "Docker.CdrGenerator/Dockerfile.executor": "Run",
+    "Docker.cdrGenerator.executor": "Run",
+    "Docker.cdr_generator.executor": "Run",
+    "Docker.docker.H2_cdr: Compose Deployment.executor": "Run",
+    "Docker.docker.brt: Compose Deployment.executor": "Run",
+    "Docker.docker.cdrGenerator: Compose Deployment.executor": "Run",
+    "Docker.docker.cdr_generator: Compose Deployment.executor": "Run",
+    "Docker.docker.h2_database: Compose Deployment.executor": "Run",
+    "Docker.docker.hrs: Compose Deployment.executor": "Run",
+    "Docker.docker.kafka: Compose Deployment.executor": "Run",
+    "Docker.docker.postgres: Compose Deployment.executor": "Run",
+    "Docker.docker.postgres_brt: Compose Deployment.executor": "Run",
+    "Docker.docker.postgres_cdr: Compose Deployment.executor": "Run",
+    "Docker.docker.postgres_hrs: Compose Deployment.executor": "Run",
+    "Docker.docker.zookeeper: Compose Deployment.executor": "Run",
+    "Docker.docker/Dockerfile (1).executor": "Run",
+    "Docker.docker/Dockerfile.executor": "Run",
+    "Docker.docker: Compose Deployment.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_1 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_10 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_11 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_13 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_14 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_15 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_16 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_17 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_18 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_2 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_3 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_4 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_7 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_8 | #1.executor": "Run",
+    "HTTP Request.DevelopmentTask-endpoints_9 | #1.executor": "Run",
+    "Maven.Brt [clean,package].executor": "Run",
+    "Maven.CdrGenerator [clean,package].executor": "Run",
+    "Maven.DevelopmentTask [clean,package].executor": "Run",
+    "Maven.DevelopmentTask [compile].executor": "Run",
+    "Maven.Hrs [clean,package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Application (1).executor": "Run",
+    "Spring Boot.Application (2).executor": "Run",
+    "Spring Boot.Application (3).executor": "Run",
+    "Spring Boot.Application.executor": "Run",
+    "Spring Boot.BrtApplication.executor": "Run",
+    "Spring Boot.CdrGeneratorApplication.executor": "Run",
+    "Spring Boot.HrsApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/prog/жаба лабы/CdrService",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "java.sql.Driver",
+      "h2",
+      "postgresql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "717619e7-6c69-4b02-87a2-76a782fd2ea7",
+      "8812e86c-ef6c-46eb-b1af-f47996ec3c59",
+      "a83ca5d3-62ae-46a3-bf60-dced6d8b1314",
+      "6536e96a-f42c-4a51-a1c9-5c0d02a99322"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/Change SQL Dialect": [
+      "PostgreSQL"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\prog\NexignBootcamp\DevelopmentTask\Brt\src\main\java\com\brt\models\costs" />
+      <recent name="C:\prog\NexignBootcamp\DevelopmentTask\Hrs\src\main\java\kafka" />
+      <recent name="C:\prog\NexignBootcamp\DevelopmentTask\docker" />
+      <recent name="C:\prog\NexignBootcamp\DevelopmentTask\CdrGenerator\src\main\resources" />
+      <recent name="C:\prog\NexignBootcamp\DevelopmentTask\Brt\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\prog\NexignBootcamp\DevelopmentTask\docker" />
+      <recent name="C:\prog\NexignBootcamp\DevelopmentTask\CdrGenerator\docker" />
+      <recent name="C:\prog\NexignBootcamp\DevelopmentTask\Hrs\docker" />
+      <recent name="C:\prog\NexignBootcamp\DevelopmentTask\Brt\src\main\resources\db.migration" />
+      <recent name="C:\prog\NexignBootcamp\DevelopmentTask\CdrGenerator\src\main\resources\db\migration" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.brt.kafka" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn compile" />
+      <command value="mvn clean package" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Docker.docker.postgres_hrs: Compose Deployment">
+    <configuration name="HrsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Hrs" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hrs.program.HrsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker.kafka: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker.postgres_brt: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres_brt" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker.postgres_cdr: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres_cdr" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker.postgres_hrs: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres_hrs" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker.zookeeper: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="zookeeper" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker.postgres_hrs: Compose Deployment" />
+        <item itemvalue="Docker.docker.postgres_brt: Compose Deployment" />
+        <item itemvalue="Docker.docker.postgres_cdr: Compose Deployment" />
+        <item itemvalue="Docker.docker.kafka: Compose Deployment" />
+        <item itemvalue="Docker.docker.zookeeper: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24fca987" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a197c37-862a-4b3d-9a89-4e4e9754fe2e" name="Changes" comment="" />
+      <created>1713950002172</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713950002172</updated>
+      <workItem from="1713950003176" duration="1260000" />
+      <workItem from="1713959167964" duration="6787000" />
+      <workItem from="1713967223739" duration="83000" />
+      <workItem from="1713967331100" duration="375000" />
+      <workItem from="1713967730796" duration="6666000" />
+      <workItem from="1713979227511" duration="3482000" />
+      <workItem from="1713983044355" duration="244000" />
+      <workItem from="1713984978649" duration="1072000" />
+      <workItem from="1713986111255" duration="335000" />
+      <workItem from="1714045092606" duration="3492000" />
+      <workItem from="1714053324142" duration="1610000" />
+      <workItem from="1714063318141" duration="27000" />
+      <workItem from="1714063985468" duration="685000" />
+      <workItem from="1714079680047" duration="2085000" />
+      <workItem from="1714082546476" duration="793000" />
+      <workItem from="1714118826603" duration="24000" />
+      <workItem from="1714120374268" duration="2236000" />
+      <workItem from="1714122731475" duration="128000" />
+      <workItem from="1714132872184" duration="3239000" />
+      <workItem from="1714136451723" duration="786000" />
+      <workItem from="1714137259873" duration="684000" />
+      <workItem from="1714137959937" duration="1456000" />
+      <workItem from="1714139747793" duration="945000" />
+      <workItem from="1714145615145" duration="1431000" />
+      <workItem from="1714150297764" duration="1198000" />
+      <workItem from="1714156605600" duration="1675000" />
+      <workItem from="1714208788108" duration="2705000" />
+      <workItem from="1714217161696" duration="777000" />
+      <workItem from="1714217982273" duration="3168000" />
+      <workItem from="1714248162753" duration="1793000" />
+      <workItem from="1714251523815" duration="327000" />
+      <workItem from="1714251872342" duration="4819000" />
+      <workItem from="1714258279090" duration="1044000" />
+      <workItem from="1714289650918" duration="4326000" />
+      <workItem from="1714294018558" duration="10643000" />
+      <workItem from="1714330559806" duration="20000" />
+      <workItem from="1714336696101" duration="98000" />
+      <workItem from="1714374632516" duration="3575000" />
+      <workItem from="1714378244988" duration="1255000" />
+      <workItem from="1714415994789" duration="6516000" />
+      <workItem from="1714460475202" duration="949000" />
+      <workItem from="1714583939316" duration="3827000" />
+      <workItem from="1714589870833" duration="9157000" />
+      <workItem from="1714634093468" duration="1594000" />
+      <workItem from="1714663261599" duration="17000" />
+      <workItem from="1714683131345" duration="1415000" />
+      <workItem from="1714736534213" duration="2345000" />
+      <workItem from="1714747499227" duration="5958000" />
+      <workItem from="1714767335528" duration="8628000" />
+      <workItem from="1714821457495" duration="3101000" />
+      <workItem from="1714897043072" duration="19690000" />
+      <workItem from="1714979584083" duration="5088000" />
+      <workItem from="1715025501635" duration="372000" />
+      <workItem from="1715026074375" duration="6923000" />
+      <workItem from="1715074307345" duration="557000" />
+      <workItem from="1715077020637" duration="788000" />
+      <workItem from="1715112370843" duration="807000" />
+      <workItem from="1715120818290" duration="4639000" />
+      <workItem from="1715157910873" duration="127000" />
+      <workItem from="1715158063818" duration="308000" />
+      <workItem from="1715161746210" duration="3652000" />
+      <workItem from="1715166331748" duration="129000" />
+      <workItem from="1715180047025" duration="7803000" />
+      <workItem from="1715250379965" duration="388000" />
+      <workItem from="1715250799946" duration="10384000" />
+      <workItem from="1715275247287" duration="472000" />
+      <workItem from="1715277345856" duration="798000" />
+      <workItem from="1715287956545" duration="8507000" />
+      <workItem from="1715338047367" duration="235000" />
+      <workItem from="1715338295461" duration="1497000" />
+      <workItem from="1715339825759" duration="168000" />
+      <workItem from="1715350424621" duration="3925000" />
+      <workItem from="1715372804971" duration="139000" />
+      <workItem from="1715383992253" duration="1266000" />
+      <workItem from="1715385568333" duration="896000" />
+      <workItem from="1715418009417" duration="4110000" />
+      <workItem from="1715422635639" duration="225000" />
+      <workItem from="1715432298705" duration="11384000" />
+      <workItem from="1715445303579" duration="3272000" />
+      <workItem from="1715449706504" duration="2268000" />
+      <workItem from="1715452028669" duration="2538000" />
+      <workItem from="1715454711005" duration="14000" />
+      <workItem from="1715461569949" duration="7188000" />
+      <workItem from="1715469448559" duration="3953000" />
+      <workItem from="1715473426271" duration="490000" />
+      <workItem from="1715504719531" duration="573000" />
+      <workItem from="1715509363758" duration="317000" />
+      <workItem from="1715509808452" duration="3828000" />
+      <workItem from="1715514128373" duration="3705000" />
+    </task>
+    <task id="LOCAL-00001" summary="add project">
+      <option name="closed" value="true" />
+      <created>1715112759169</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715112759169</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add api">
+      <option name="closed" value="true" />
+      <created>1715372878143</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715372878143</updated>
+    </task>
+    <task id="LOCAL-00003" summary="edit api">
+      <option name="closed" value="true" />
+      <created>1715432649533</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715432649533</updated>
+    </task>
+    <task id="LOCAL-00004" summary="edit api 2.0">
+      <option name="closed" value="true" />
+      <created>1715436503153</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715436503153</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.cfg" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add project" />
+    <MESSAGE value="add api" />
+    <MESSAGE value="edit api" />
+    <MESSAGE value="edit api 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit api 2.0" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.kafka.KafkaException" package="org.springframework.kafka" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DevelopmentTask$Application__1_.ic" NAME="Application (1) Coverage Results" MODIFIED="1714053183627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.brt.program.*</FILTER>
+    </SUITE>
+  </component>
+</project>
